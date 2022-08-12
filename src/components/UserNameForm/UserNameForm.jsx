@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import './UserNameForm.scss';
 
-const UserNameFrom = () => {
+const UserNameFrom = (props) => {
     const [userName, setUserName] = useState("");
+    const dispatch = useDispatch();
 
     function handleSubmit(e) {
         e.preventDefault();
+        props.fetchUser(userName);
         setUserName("");
     }
 
