@@ -1,0 +1,57 @@
+@import '../../properties.scss';
+@import '../../variables.scss';
+
+.repocard{
+    border-bottom: solid 1px;
+    padding: 10px 0;
+    @include hover-animate;
+
+    p{
+        padding: 0;
+        margin: 0;
+    }
+
+    .reponame{
+        margin-bottom: 5px;
+        color: $font-blue-drk;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .description{
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+    
+
+    .info-div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+
+        .icon-div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 12px;
+
+            .info-icon{
+                padding: 3px 0;
+                margin-left: -5px;
+            }
+        }
+    }
+}
+
+
+.repocard-drk{
+    color: $font-info-drk;
+    border-color: $repo-border-drk;
+
+    &:hover{
+        background-color: $repo-hover-drk;
+    }
+}

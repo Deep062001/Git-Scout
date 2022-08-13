@@ -21,6 +21,7 @@ const MainPage = () => {
             <NavBar />
             <div className='info-div'>
                 <UserInfo />
+                <RepoView />
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import RepoCard from '../RepoCard/RepoCard';
 import './RepoView.scss';
 
 const RepoView = () => {
@@ -7,14 +8,17 @@ const RepoView = () => {
 
     console.log(userRepos);
     return (
-        <div className='outer-div'>
+        <div className='repoview-outer-div'>
 
-            {userRepos.length === 0 ? <h2>Loading..</h2> :
+            {/* {userRepos.length === 0 ? <h2>Loading..</h2> :
                 userRepos.map((repo) => {
                     return <div key={repo._id}> {repo.name} </div>
                 }
                 )
-            }
+            } */}
+            <RepoCard />
+            <RepoCard />
+            <RepoCard />
 
         </div>
     )
