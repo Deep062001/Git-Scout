@@ -1,0 +1,8 @@
+
+@mixin hover-animate{
+    transition: all .3s ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}

@@ -1,0 +1,14 @@
+@import '../../properties.scss';
+@import '../../variables.scss';
+
+.mainpage-drk{
+    background-color: $bg-color-main-drk;
+}
+
+.mainpage{
+    .info-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

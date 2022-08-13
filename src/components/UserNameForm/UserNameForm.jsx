@@ -6,32 +6,9 @@ import './UserNameForm.scss';
 
 const UserNameFrom = (props) => {
     const [userName, setUserName] = useState("");
-    const [userInfo, setUserInfo] = useState({
-        Username: "",
-        Name: "",
-        Bio: "",
-        profileImg: "",
-        Location: "",
-        NumberofFollowing: "",
-        NumberofFollowers: "",
-        NumberofpublicRepositories: ""
-    });
+
     const userProfile = useSelector((state) => state.githubInfo);
     const dispatch = useDispatch();
-
-    function updateUserData() {
-        setUserInfo({
-            Username: userProfile.login,
-            Name: userProfile.name,
-            Bio: userProfile.bio,
-            profileImg: userProfile.avatar_url,
-            Location: userProfile.Location,
-            NumberofFollowing: userProfile.following,
-            NumberofFollowers: userProfile.followers,
-            NumberofpublicRepositories: userProfile.public_repos
-        })
-        console.log(userInfo);
-    }
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -54,14 +31,6 @@ const UserNameFrom = (props) => {
             <div className='outer-div'>
                 {userProfile.length === 0 ? null :
                     <div>
-                        {/* <p>{userInfo.Username}</p>
-                        <p>{userInfo.Name}</p>
-                        <p>{userInfo.Bio}</p>
-                        <img src={userInfo.profileImg} alt="img" />
-                        <p>{userInfo.Location}</p>
-                        <p>{userInfo.NumberofFollowing}</p>
-                        <p>{userInfo.NumberofFollowers}</p>
-                        <p>{userInfo.NumberofpublicRepositories}</p> */}
                         <p>{userProfile.login}</p>
                         <p>{userProfile.name}</p>
                         <p>{userProfile.bio}</p>
