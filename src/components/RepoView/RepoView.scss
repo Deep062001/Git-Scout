@@ -45,3 +45,27 @@
         }
     }
 }
+
+
+.repoview-lgt{
+    .page-no{
+        color: $font-info-main-lgt;
+        padding: 0;
+        margin: 0;
+    }
+    .slick-slider{
+        li.slick-active{
+            background-color: $font-blue-lgt;
+            p{
+                color: #fff;
+                font-weight: 700;
+            }
+        } 
+
+        li{
+            &:hover{
+                background-color: $repo-hover-lgt;
+            }
+        }
+    }
+}

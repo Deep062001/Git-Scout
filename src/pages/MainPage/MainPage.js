@@ -1,7 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getPublicRepos } from '../../actions/githubRepos';
-import UserNameFrom from '../../components/UserNameForm/UserNameForm';
 import RepoView from '../../components/RepoView/RepoView';
 import './MainPage.scss';
 import NavBar from '../../components/NavBar/NavBar';

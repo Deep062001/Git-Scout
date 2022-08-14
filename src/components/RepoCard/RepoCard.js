@@ -2,11 +2,13 @@ import React from 'react';
 import ForkRightIcon from '@mui/icons-material/ForkRight';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import { useSelector } from 'react-redux';
 import './RepoCard.scss';
 
 const RepoCard = (props) => {
+    const isDark = useSelector((state) => state.switchMode);
     return (
-        <div className='repocard repocard-drk'>
+        <div className={`repocard ${isDark ? "repocard-drk" : "repocard-lgt"}`}>
             <p className='reponame'>{props.repo.name}</p>
             <p className='description'>{props.repo.description}</p>
             <div className='info-div'>

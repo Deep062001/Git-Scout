@@ -13,7 +13,6 @@
 
     .reponame{
         margin-bottom: 5px;
-        color: $font-blue-drk;
         font-weight: 600;
         font-size: 20px;
     }
@@ -53,7 +52,25 @@
     color: $font-info-drk;
     border-color: $repo-border-drk;
 
+    .reponame{ 
+        color: $font-blue-drk;
+    }
+
     &:hover{
         background-color: $repo-hover-drk;
+    }
+}
+
+
+.repocard-lgt{
+    color: $font-info-lgt;
+    border-color: $repo-border-lgt;
+    
+    .reponame{ 
+        color: $font-blue-lgt;
+    }
+
+    &:hover{
+        background-color: $repo-hover-lgt;
     }
 }

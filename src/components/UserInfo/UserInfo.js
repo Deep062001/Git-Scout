@@ -8,10 +8,11 @@ import './UserInfo.scss';
 
 const UserInfo = () => {
     const userProfile = useSelector((state) => state.githubInfo);
+    const isDark = useSelector((state) => state.switchMode);
 
     console.log(userProfile);
     return (
-        userProfile.length === 0 ? "" : <div className='userinfo userinfo-drk'>
+        userProfile.length === 0 ? "" : <div className={`userinfo ${isDark ? "userinfo-drk" : "userinfo-lgt"}`}>
             <img className='user-avatar' src={userProfile.avatar_url} alt='user-avatar' />
             <p className='fullname'>{userProfile.name}</p>
             <p className='username'>{userProfile.login}</p>

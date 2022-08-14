@@ -9,6 +9,7 @@ import './RepoView.scss';
 
 const RepoView = () => {
     const userRepos = useSelector((state) => state.githubRepos);
+    const isDark = useSelector((state) => state.switchMode);
     console.log(userRepos);
     var settings = {
         customPaging: function (i) {
@@ -39,7 +40,7 @@ const RepoView = () => {
         }]
     };
     return (
-        <div className='repoview-outer-div repoview-drk'>
+        <div className={`repoview-outer-div ${isDark ? "repoview-drk" : "repoview-lgt"}`}>
             <Slider {...settings}>
                 {userRepos.length === 0 ? <div className='progress'><CircularProgress /></div> :
                     userRepos.map((repo) => {

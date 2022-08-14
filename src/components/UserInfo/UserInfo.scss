@@ -94,3 +94,32 @@
         }
     }
 }
+
+
+.userinfo-lgt{
+    color: $font-info-main-lgt;
+
+    .username{
+        color: $font-info-lgt;
+    }
+
+    .info-icons{
+        color: $font-info-lgt;
+    }
+
+    .dot-icon{
+        color: $font-info-lgt;
+    }
+
+    .user-avatar{
+        color: $font-info-lgt;
+    }
+
+    .icon-div{
+        color: $font-info-lgt;
+
+        .bold{
+            color: $font-info-main-lgt;
+        }
+    }
+}
