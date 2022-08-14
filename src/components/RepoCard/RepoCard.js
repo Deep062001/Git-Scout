@@ -10,10 +10,12 @@ const RepoCard = (props) => {
             <p className='reponame'>{props.repo.name}</p>
             <p className='description'>{props.repo.description}</p>
             <div className='info-div'>
-                <div className='icon-div'>
-                    <FiberManualRecordIcon className='info-icon' />
-                    <p>{props.repo.language}</p>
-                </div>
+                {
+                    props.repo.language && <div className='icon-div'>
+                        <FiberManualRecordIcon className='info-icon' />
+                        <p>{props.repo.language}</p>
+                    </div>
+                }
                 <div className='icon-div'>
                     <ForkRightIcon className='info-icon' />
                     <p>{props.repo.forks_count}</p>

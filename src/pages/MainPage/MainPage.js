@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { getPublicRepos } from '../../actions/githubRepos';
 import UserNameFrom from '../../components/UserNameForm/UserNameForm';
 import RepoView from '../../components/RepoView/RepoView';
@@ -8,21 +8,21 @@ import NavBar from '../../components/NavBar/NavBar';
 import UserInfo from '../../components/UserInfo/UserInfo';
 
 const MainPage = () => {
-    const dispatch = useDispatch();
 
-    function fetchUserRepos(userName) {
-        dispatch(getPublicRepos(userName));
-    }
+    const userProfile = useSelector((state) => state.githubInfo);
+    console.log(userProfile);
 
     return (
         <div className='mainpage mainpage-drk'>
             {/* <UserNameFrom fetchUserRepos={fetchUserRepos} />
             <RepoView /> */}
             <NavBar />
-            <div className='info-div'>
-                <UserInfo />
-                <RepoView />
-            </div>
+            {
+                userProfile.length === 0 ? <p className='hello'>"HELLOOOO"</p> : <div className='info-div'>
+                    <UserInfo />
+                    <RepoView />
+                </div>
+            }
         </div>
     )
 }

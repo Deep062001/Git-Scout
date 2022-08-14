@@ -11,7 +11,7 @@ const UserInfo = () => {
 
     console.log(userProfile);
     return (
-        userProfile === null ? "" : <div className='userinfo userinfo-drk'>
+        userProfile.length === 0 ? "" : <div className='userinfo userinfo-drk'>
             <img className='user-avatar' src={userProfile.avatar_url} alt='user-avatar' />
             <p className='fullname'>{userProfile.name}</p>
             <p className='username'>{userProfile.login}</p>
@@ -26,10 +26,12 @@ const UserInfo = () => {
                 <BookOutlinedIcon className='info-icons' />
                 <p><span className='bold'>{userProfile.public_repos}</span> public repos</p>
             </div>
-            <div className='icon-div'>
-                <PlaceOutlinedIcon className='info-icons' />
-                <p>{userProfile.Location}</p>
-            </div>
+            {
+                userProfile.location && <div className='icon-div'>
+                    <PlaceOutlinedIcon className='info-icons' />
+                    <p>{userProfile.location}</p>
+                </div>
+            }
 
         </div>
     )

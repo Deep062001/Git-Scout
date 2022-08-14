@@ -45,16 +45,19 @@
         background-color: $bg-color-main-drk;
         color: $navbar-font-drk;
         ::-webkit-input-placeholder {
-            color: $font-info-drk;
+            color: $font-search-placeholder;
          }
          :-moz-placeholder { /* Upto Firefox 18, Deprecated in Firefox 19  */
-            color: $font-info-drk;
+            color: $font-search-placeholder;
          }
          ::-moz-placeholder {  /* Firefox 19+ */
-            color: $font-info-drk;
+            color: $font-search-placeholder;
          }
          :-ms-input-placeholder {  
-            color: $font-info-drk;
+            color: $font-search-placeholder;
+         }
+         &::placeholder {
+            color: $font-search-placeholder;
          }
     }
     .search-btn{
