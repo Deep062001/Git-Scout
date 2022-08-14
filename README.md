@@ -20,3 +20,12 @@ Get to the root folder and type this:
 npm install
 npm start
 ```
+
+### About
+
+Currently only Desktop view is available
+![Alt text](https://ibb.co/vqBrwNB)
+![Alt text](https://ibb.co/R7rFF2v)
+![Alt text](https://ibb.co/jwQWFnm)
+![Alt text](https://ibb.co/3s0c5L4)
+![Alt text](https://ibb.co/GdcQN88)
