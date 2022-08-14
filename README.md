@@ -32,3 +32,8 @@ Currently only Desktop view is available
 #### Light Mode
 ![Image](assets/scout2.png)
 ![Image](assets/scout4.png)
+
+
+### Links
+[Video Link](https://drive.google.com/file/d/1IYoOCZO1-nxnmZU8lLA4NItu56xlTLpn/view?usp=sharing)
+[Project Link](https://github-scout-gs.netlify.app/)
