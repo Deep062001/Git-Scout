@@ -24,3 +24,4 @@ npm start
 ### About
 
 Currently only Desktop view is available
+![Image](assets/scout1.png)
