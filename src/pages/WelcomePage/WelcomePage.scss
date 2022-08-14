@@ -1,0 +1,19 @@
+@import '../../properties.scss';
+@import '../../variables.scss';
+
+.welcome{
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;   
+    
+
+    .logo-img{
+        height: 500px;
+        width: 500px;
+    }
+}

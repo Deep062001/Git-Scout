@@ -3,8 +3,8 @@ export default (githubInfo = [], action) => {
     switch (action.type) {
         case 'FETCH_USER':
             return action.payload;
-        // case 'FETCH_REPOS':
-        //     return action.payload;
+        case 'NOT_FOUND':
+            return action.payload;
         default:
             return githubInfo;
     }

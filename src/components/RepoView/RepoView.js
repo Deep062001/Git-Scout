@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import RepoCard from '../RepoCard/RepoCard';
 import Slider from "react-slick";
+import CircularProgress from '@mui/material/CircularProgress';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './RepoView.scss';
@@ -40,7 +41,7 @@ const RepoView = () => {
     return (
         <div className='repoview-outer-div repoview-drk'>
             <Slider {...settings}>
-                {userRepos.length === 0 ? <h2>Loading...</h2> :
+                {userRepos.length === 0 ? <div className='progress'><CircularProgress /></div> :
                     userRepos.map((repo) => {
                         return <RepoCard repo={repo} key={repo.name} />
                     }

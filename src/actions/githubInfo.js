@@ -5,7 +5,11 @@ export const getUserbyUserName = (userName) => async (dispatch) => {
         const { data } = await api.fetchUserbyUserName(userName);
         dispatch({ type: 'FETCH_USER', payload: data })
     } catch (error) {
+        const data = {
+            message: "Not Found"
+        }
         console.log(error.message);
+        dispatch({ type: 'NOT_FOUND', payload: data })
     }
 }
 

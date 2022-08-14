@@ -4,7 +4,7 @@ $bg-color-main-drk: #0d1117;
 
 $font-info-main-drk:#c9d1d9;
 $font-info-drk:#8b949e;
-$font-search-placeholder:#c4c9ce;
+$font-search-placeholder-drk:#c4c9ce;
 $font-blue-drk:#58a6ff;
 
 $navbar-bg-drk:#161b22;
@@ -17,12 +17,17 @@ $btn-bg-repo-drk:#21262d;
 
 
 // light theme
+$bg-color-main-lgt: #ffffff;
 
-$bg-color-main-lgt: #0d1117;
-
-$font-info-main-lgt:#c9d1d9;
-$font-info-lgt:#8b949e;
-$font-blue-lgt:#58a6ff;
+$font-info-main-lgt:#24292f;
+$font-info-lgt:#57606a;
+$font-search-placeholder-lgt:#c4c9ce;
+$font-blue-lgt:#0969da;
 
 $navbar-bg-lgt:#161b22;
-$mavbar-font-lgt:#f0f6fc;
+$navbar-font-lgt:#f0f6fc;
+$navbar-border-lgt:#30363d;
+
+$repo-hover-lgt: #15171b;
+$repo-border-lgt:#22262b;
+$btn-bg-repo-lgt:#21262d;

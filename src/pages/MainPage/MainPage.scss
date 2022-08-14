@@ -3,10 +3,28 @@
 
 .mainpage-drk{
     background-color: $bg-color-main-drk;
+
+    .welcome-div{
+        color: $font-info-main-drk;
+    }
 }
+
+.mainpage-lgt{
+    background-color: $bg-color-main-lgt;
+}
+
 
 .mainpage{
     max-width: 100vw;
+    .welcome-div{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 45px;
+    }
     .info-div{
         padding: 0 5%;
         display: flex;
@@ -14,8 +32,4 @@
         flex-direction: row;
         justify-content: flex-start;
     }
-}
-
-.hello{
-    color: red;
 }
