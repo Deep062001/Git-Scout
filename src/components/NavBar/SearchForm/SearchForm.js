@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { useDispatch } from 'react-redux';
+import { getUserbyUserName } from '../../../actions/githubInfo';
+import { getPublicRepos } from '../../../actions/githubRepos';
 import './SearchForm.scss';
 
 const SearchForm = () => {
     const [userName, setUserName] = useState("");
 
     // const userProfile = useSelector((state) => state.githubInfo);
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     function handleSubmit(e) {
         e.preventDefault();
-        // dispatch(getUserbyUserName(userName))
+        dispatch(getUserbyUserName(userName))
+        dispatch(getPublicRepos(userName));
         // props.fetchUserRepos(userName);
         setUserName("");
     }

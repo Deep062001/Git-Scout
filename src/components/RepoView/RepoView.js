@@ -10,15 +10,12 @@ const RepoView = () => {
     return (
         <div className='repoview-outer-div'>
 
-            {/* {userRepos.length === 0 ? <h2>Loading..</h2> :
+            {userRepos.length === 0 ? <h2>Loading...</h2> :
                 userRepos.map((repo) => {
-                    return <div key={repo._id}> {repo.name} </div>
+                    return <RepoCard repo={repo} key={repo.name} />
                 }
                 )
-            } */}
-            <RepoCard />
-            <RepoCard />
-            <RepoCard />
+            }
 
         </div>
     )

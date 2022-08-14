@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
@@ -6,25 +7,28 @@ import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import './UserInfo.scss';
 
 const UserInfo = () => {
+    const userProfile = useSelector((state) => state.githubInfo);
+
+    console.log(userProfile);
     return (
-        <div className='userinfo userinfo-drk'>
-            <img className='user-avatar' src='https://avatars.githubusercontent.com/u/69765597?v=4' alt='user-avatar' />
-            <p className='fullname'>Full Name</p>
-            <p className='username'>UserName</p>
-            <p className='bio'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        userProfile === null ? "" : <div className='userinfo userinfo-drk'>
+            <img className='user-avatar' src={userProfile.avatar_url} alt='user-avatar' />
+            <p className='fullname'>{userProfile.name}</p>
+            <p className='username'>{userProfile.login}</p>
+            <p className='bio'>{userProfile.bio}</p>
             <div className='icon-div'>
                 <PeopleAltOutlinedIcon className='info-icons' />
-                <span><span className='bold'>2</span> followers</span>
+                <span><span className='bold'>{userProfile.followers}</span> followers</span>
                 <FiberManualRecordIcon className='dot-icon' />
-                <span><span className='bold'>2</span> following</span>
+                <span><span className='bold'>{userProfile.following}</span> following</span>
             </div>
             <div className='icon-div'>
                 <BookOutlinedIcon className='info-icons' />
-                <p><span className='bold'>2</span> public repos</p>
+                <p><span className='bold'>{userProfile.public_repos}</span> public repos</p>
             </div>
             <div className='icon-div'>
                 <PlaceOutlinedIcon className='info-icons' />
-                <p>Delhi</p>
+                <p>{userProfile.Location}</p>
             </div>
 
         </div>
