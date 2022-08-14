@@ -24,7 +24,7 @@ npm start
 ### About
 
 Currently only Desktop view is available
-<img src='https://ibb.co/vqBrwNB' />
+<img src="https://ibb.co/vqBrwNB"></img>
 ![Alt text](https://ibb.co/vqBrwNB)
 ![Alt text](https://ibb.co/R7rFF2v)
 ![Alt text](https://ibb.co/jwQWFnm)
