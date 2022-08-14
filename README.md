@@ -24,4 +24,11 @@ npm start
 ### About
 
 Currently only Desktop view is available
+#### Dark Mode
 ![Image](assets/scout1.png)
+![Image](assets/scout3.png)
+![Image](assets/scout5.png)
+
+#### Light Mode
+![Image](assets/scout2.png)
+![Image](assets/scout4.png)
