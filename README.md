@@ -3,13 +3,13 @@
 Clone this repository
 
 ```shell
-git clone https://github.com/Deep062001/preImgAssign.git
+git clone https://github.com/Deep062001/Git-Scout.git
 ```
 
 Move to the repository's root folder
 
 ```shell
-cd preImgAssign
+cd Git-Scout
 ```
 
 ##### For running the react app
